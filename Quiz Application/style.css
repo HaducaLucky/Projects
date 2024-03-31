@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    top: 150px;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(181,133,130,1) 42%, rgba(30,96,175,1) 100%);
+}
+
+.app {
+    background: rgb(63, 109, 194);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.app h1 {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    border-bottom: 1px solid hsl(0, 0%, 20%);
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
+
+.btn {
+    background: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 13%);
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid hsl(0, 0%, 13%);
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background: hsl(0, 0%, 13%);
+    color: hsl(0, 0%, 100%);
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#next-btn {
+    background: hsl(217, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct {
+    background: hsl(146, 66%, 76%);
+}
+
+.incorrect {
+    background: hsl(0, 100%, 79%);
+}
