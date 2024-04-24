@@ -1,0 +1,186 @@
+/* Reset and global styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+    transition: all 0.5s ease;
+}
+
+h1 {
+    position: relative;
+    font-style: italic;
+    font-size: 20px;
+    top: -6px;
+    left: -10px;
+}
+h1:before {
+    content: "CALCULATOR😊"; /* Default text for light mode */
+}
+
+.calculator.dark h1 {
+    color: #f8fafd; /* Dark mode text color */
+}
+.calculator.dark h1:before {
+    content: "CALCULATOR🥺"; /* Text for dark mode */
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom right, rgb(36, 40, 90), rgb(66, 109, 129));
+}
+
+a {
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+}
+
+/* Calculator styles */
+.calculator {
+    position: relative;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #000;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.display-screen {
+    margin: 0 10px;
+    height: 150px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin-bottom: 20px;
+    overflow-x: scroll;
+    color: hsl(192, 56%, 9%);
+}
+
+button {
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button#equal {
+    height: 130px;
+}
+
+/* Light theme styles */
+.calculator button#clear {
+    background-color: hsl(356, 100%, 92%);
+    color: hsl(356, 97%, 63%);
+}
+
+.calculator button.btn-number {
+    background-color: hsl(201, 100%, 88%);
+    color: hsl(0, 0%, 0%);
+}
+
+.calculator button.btn-operator {
+    background-color: hsl(303, 100%, 91%);
+    color: hsl(302, 92%, 69%);
+}
+
+.calculator button.btn-equal {
+    background-color: hsl(166, 86%, 83%);
+    color: hsl(0, 0%, 0%);
+}
+
+/* Dark theme styles */
+.calculator.dark {
+    background-color: #071115;
+}
+
+.calculator.dark .display-screen {
+    color: #f8fafd;
+}
+
+.calculator.dark button#clear {
+    background-color: #2d191e;
+    color: #bd3740;
+}
+
+.calculator.dark button.btn-number {
+    background-color: #1b2f38;
+    color: #f8fafb;
+}
+
+.calculator.dark button.btn-operator {
+    background-color: #2e1f39;
+    color: #aa00a4;
+}
+
+.calculator.dark button.btn-equal {
+    background-color: #223323;
+    color: #ffffff;
+}
+
+/* Dark mode toggle button styles */
+input[type="checkbox"] {
+    display: none;
+}
+
+label[for="darkmode-toggle"] {
+    position: absolute;
+    top: 10px; /* Adjust position as needed */
+    right: 10px; /* Adjust position as needed */
+    width: 50px;
+    height: 25px;
+    background: #ebebeb;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+label[for="darkmode-toggle"]:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 19px;
+    height: 19px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + label[for="darkmode-toggle"] {
+    background: #242424;
+}
+
+input[type="checkbox"]:checked + label[for="darkmode-toggle"]:after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+
+footer {
+    position: relative;
+    font-size: 14px;
+    bottom: -13px;
+    right: -85px;
+}
+
+.calculator.dark footer {
+    color: white;
+}
